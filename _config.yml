@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Site Title"
+title                    : "Data Science with Chichak"
 title_separator          : "-"
 name                     : "Ichrak LAFRAM"
 description              : "Am a data science enthousist, Cartoonist and a Teacher !"
