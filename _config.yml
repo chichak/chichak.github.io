@@ -107,20 +107,20 @@ analytics:
 # Site Author
 author:
   name             : "Ichrak LAFRAM"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/images/me.png"# path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Am a data science enthousist, Cartoonist and a Teacher !"
   location         : "Rabat, MA"
   email            :
   links:
-    - label: "ichrak.7@gmail.com"
+    - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: mailto:your.name@email.com
+      url: mailto:ichrak.7@gmail.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://chichak.github.io"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
+      url: "https://twitter.com/ichrakseven"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
@@ -293,3 +293,11 @@ defaults:
       comments: # true
       share: true
       related: true
+
+# _posts
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
