@@ -108,8 +108,8 @@ analytics:
 author:
   name             : "Ichrak LAFRAM"
   avatar           : "/images/ichrak.png"# path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Am a data science enthousist, Cartoonist and a Teacher !"
-  location         : "Rabat, MA"
+  bio              : "Am a data science Lover, Cartoonist and Engineer !"
+  location         : "Mind.."
   email            :
   links:
     - label: "Email"
