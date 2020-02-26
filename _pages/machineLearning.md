@@ -1,50 +1,53 @@
 ---
-title: "Machine Learning"
+title: Machine Learning
 permalink: /Machine-Learning/
 header:
-  image: "/images/banner.png"
+  image: /images/banner.png
+published: true
 ---
-l would like to use this new representation of images (features extracted from k-means algorithm) as SVM classifier inputs. How can l do that ?
+---
+title: "Working with Collections"
+permalink: /docs/collections/
+excerpt: "Suggestions and Front Matter defaults for working with collections."
+last_modified_at: 2018-03-20T16:00:02-04:00
+---
 
-Here is my code:
+Collections like posts and pages work as you'd expect. If you're new to them be sure to read [Jekyll's documentation](https://jekyllrb.com/docs/collections/).
 
-EDIT1:
-package update
+The theme has been built with collections in mind and you will find [several examples]({{ "/collection-archive/" | relative_url }}) on the demo site ([portfolio]({{ "/portfolio/" | relative_url }}), [recipes]({{ "/recipes/" | relative_url }}), [pets]({{ "/pets/" | relative_url }})). 
 
-```Python
-from sklearn import mixture
-gmm = mixture.GMM(n_components=6).fit(X)
+**Collections in the Wild:** This set of documentation is also [built as a collection](https://github.com/{{ site.repository }}/blob/master/docs/_docs/) if you're looking for a fully fleshed out example to inspect.
+{: .notice--info}
+
+---
+
+A popular use case for collections is to build a portfolio section as part of one's personal site. Let's quickly walk through the steps to do that.
+
+**Step 1:** Configure the portfolio collection by adding the following to `_config.yml`.
+
+```yaml
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
 ```
 
-Now l would like run k-means with different k=range(50,500), how can l get the distances for each k ? Is is correct to do the following :
+These settings essentially say output `index.html` files for each portfolio document in `_portfolio` at `_site/portfolio/<document-filename>/`.
 
-```Python
-K=range(50,500)
-KM=[KMeans(n_clusters=k).fit(X) for k in K]
-distances = [np.column_stack([np.sum((X - center)**2, axis=1)**0.5 for center in C.cluster_centers_]) for C in KM]
+Just like posts and pages you'll probably want to set some defaults for the Front Matter:
+
+```yaml
+defaults:
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: false
+      share: true
 ```
 
-Prediction of k-means algorithm for each observation is just the corresponding centroid. So you can take vector of predicted centroids and use it as a categorical feature (maybe one-hot encoded).
+And then create portfolio content like [`_portfolio/foo-bar-website.md`](https://github.com/{{ site.repository }}/blob/master/docs/_portfolio/foo-bar-website.md), to end up with something like this.
 
-But it is just one feature. With little coding you can do better. For example, you can find for each sample its distance to each of k cluster center, and so create k new features. A Python example:
-
-```Python
-from sklearn.datasets import load_iris
-from sklearn.cluster import KMeans
-from sklearn.svm import SVC
-import numpy as np
-iris =  load_iris()
-X = iris['data']
-y = iris['target']
-kmeans = KMeans(n_clusters=6).fit(X)
-distances = np.column_stack([np.sum((X - center)**2, axis=1)**0.5 for center in kmeans.cluster_centers_])
-svm = SVC().fit(distances, y)
-```
-Another (and maybe simpler way) is to fit a gaussian mixture model (e.g. by scikit-learn). It is similar to k-means, but for each observation produces a probability distribution over clusters, instead of a single cluster label. These vectors of predicted cluster probabilities may be used as features as well.
-
-```Python
-from sklearn.mixture import GaussianMixture
-gmm = GaussianMixture(n_components=6).fit(X)
-proba = gmm.predict_proba(X)
-svm2 = SVC().fit(proba, y)
-```
+![portfolio collection example]({{ "/assets/images/mm-portfolio-collection-example.jpg" | relative_url }})
