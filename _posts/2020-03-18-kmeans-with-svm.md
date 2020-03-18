@@ -1,4 +1,13 @@
- l would like to use this new representation of images (features extracted from k-means algorithm) as SVM classifier inputs. How can l do that ?
+
+---
+layout: post
+title: 'I love pizza!'
+date: '2020-03-18 15:25:00 -0400'
+categories: ml
+---
+
+
+l would like to use this new representation of images (features extracted from k-means algorithm) as SVM classifier inputs. How can l do that ?
 
 Here is my code:
 
