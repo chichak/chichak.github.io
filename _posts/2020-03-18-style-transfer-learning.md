@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "Style Transfer Learning !"
+date: '2020-03-18 14:25:00 -0400'
+categories: ml
 ---
 
 # Welcome
