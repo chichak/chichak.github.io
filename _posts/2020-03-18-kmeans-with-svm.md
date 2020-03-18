@@ -1,8 +1,8 @@
 
 ---
 layout: post
-title: 'I love pizza!'
-date: '2020-03-18 15:25:00 -0400'
+title: 'Kmeans with SVM Algorithms'
+date: '2020-03-18 15:25:00 +0100'
 categories: ml
 ---
 
