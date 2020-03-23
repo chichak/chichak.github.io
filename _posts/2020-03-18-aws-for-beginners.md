@@ -1,7 +1,7 @@
 
 ---
 layout: post
-title:  "AWS for beginners :)"
+title:  "AWS for beginners"
 categories: [blog, AI]
 tags: [artificial intelligence, ml]
 ---
