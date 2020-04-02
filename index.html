@@ -1,5 +1,13 @@
 
- <!DOCTYPE html>
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul> 
+
+<!DOCTYPE html>
 <html>
 <head>
   <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
@@ -8,13 +16,6 @@
 <body>
 
 <h1>Welcome</h1>
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
   
   <form action="https://send.pageclip.co/Wzm5pK47HJUuzS3bKtCswJdhKadXtO7z" class="pageclip-form" method="post">
   <!-- Replace these inputs with your own. Make sure they have a "name" attribute! -->
