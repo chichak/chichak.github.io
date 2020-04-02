@@ -6,6 +6,9 @@ date: '2020-04-02 14:25:00 +0100'
 categories: maths
 ---
 
+![png]({{ "/images/lorenz_attractor.png" }})
+
+
 ```python
 # Plot of the Lorenz Attractor based on Edward Lorenz's 1963 "Deterministic
 # Nonperiodic Flow" publication.
