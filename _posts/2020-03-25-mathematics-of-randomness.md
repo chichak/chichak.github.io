@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title:  "Mathematics of Randomness"
@@ -6,8 +5,8 @@ categories: [blog, AI]
 tags: [artificial intelligence, ml]
 ---
 
-![Randomness](/https://images.unsplash.com/photo-1505678261036-a3fcc5e884ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80){:class="img-responsive"}
 
+![png]({{ "/images/random.png" }}){:class="img-responsive"}
 
 Les mathématiciens élaborent une nouvelle théorie pour expliquer l'aléa du monde réel.
 
