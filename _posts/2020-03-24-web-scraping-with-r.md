@@ -27,7 +27,7 @@ title_rating_df <- data.frame(title, rating, links)
 
 title_rating_df
 
-This is just for test ---
+Again, this is just for test ---
 
-<script type="text/javascript" src="//cdn.datacamp.com/dcl-react.js.gz"></script>
+{% include datacamp.html %}
 
