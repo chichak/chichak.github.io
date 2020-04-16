@@ -26,3 +26,6 @@ links <- html_attr(header_nodes, "href")
 title_rating_df <- data.frame(title, rating, links)
 
 title_rating_df
+
+<script type="text/javascript" src="//cdn.datacamp.com/dcl-react.js.gz"></script>
+
