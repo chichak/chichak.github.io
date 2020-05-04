@@ -11,4 +11,9 @@
   <p>
   This is where you can learn advanced stuff using R programming like <strong> R Text mining</strong>, or <strong>Empirical Bayes ...</strong>
   </p>
+  <li><a href="https://www.statsandr.com/tags/r/">R blog - Stats and R</a></li>
+  <p>
+  This is a good place where <strong>noobes</strong> can learn R.
+  </p>
 </ul>
+
