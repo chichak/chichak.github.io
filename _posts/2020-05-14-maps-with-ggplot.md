@@ -1,6 +1,6 @@
 ## This is the code to build maps for morocco 12 states.
 ## The geojson file is located here : 
-<a href=https://github.com/chichak/Covid19-MA/blob/master/ma-convid19-state.geojson>
+<a href= "https://github.com/chichak/Covid19-MA/blob/master/ma-convid19-state.geojson">
 
 ```R
 library(geojsonio)
@@ -46,3 +46,5 @@ ggplotly(ggplot() +
 # 
 # geom_polygon(data = subset(bundes_unemp, id == "Berlin")) 
 ```
+
+![png](/images/morocco.png)
