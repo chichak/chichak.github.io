@@ -1,6 +1,8 @@
 ## This is the code to build maps for morocco 12 states.
-## The geojson file is located here : 
-<a href= "https://github.com/chichak/Covid19-MA/blob/master/ma-convid19-state.geojson">
+The geojson file is located here : 
+<a href= "https://github.com/chichak/Covid19-MA/blob/master/ma-convid19-state.geojson"> geojson file link </a>
+
+![png](/images/morocco.png)
 
 ```R
 library(geojsonio)
@@ -10,7 +12,9 @@ spdf <- geojson_read("C:/Users/John Doe/Desktop/Covid/ma-convid19-state.geojson"
 # 'fortify' the data to get a dataframe format required by ggplot2
 library(broom)
 spdf_fortified <- tidy(spdf)
+```
 
+```R
 # Add column "region" and bind it to "names.FR" from first file
 spdf_fortified$region <- factor(as.numeric(spdf_fortified$id))
 levels(spdf_fortified$region) <- spdf$Name.FR
@@ -22,6 +26,9 @@ names(reg_cases) <- c("region", "active")
 
 #Merge datasets into one full dataset
 active_regions <- merge(spdf_fortified, reg_cases)
+```
+
+```R
 # Plot it
 library(ggplot2)
 library(ggthemes)
@@ -47,4 +54,4 @@ ggplotly(ggplot() +
 # geom_polygon(data = subset(bundes_unemp, id == "Berlin")) 
 ```
 
-![png](/images/morocco.png)
+
