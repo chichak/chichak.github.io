@@ -1,8 +1,5 @@
 
----
-layout: post
-title:  "AWS for beginners"
----
+
 
 
 ## 1. Patterns in nature
