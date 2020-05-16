@@ -1,18 +1,13 @@
 
----
 
-layout: post
+Mimicking a <strong>Google Form</strong> with a Shiny app : 
 
----
+<a href="https://deanattali.com/2015/06/14/mimicking-google-form-shiny/">Dean Attali - Google form with Shiny</a>
 
-Mimicking a Google Form with a Shiny app : 
-
-https://deanattali.com/2015/06/14/mimicking-google-form-shiny/
-
-https://cran.r-project.org/web/packages/shinyFeedback/vignettes/shinyFeedback-intro.html
+<a href="https://cran.r-project.org/web/packages/shinyFeedback/vignettes/shinyFeedback-intro.html"> ShinyFeedback Package </a>
 
 ##Bonus :
 
-Use R with H2O for machine learning projects.
+Use R with <strong>H2O</strong> for your machine learning projects:
 
-http://thinktostart.com/predict-social-network-influence-with-r-and-h2o-ensemble-learning/
+<a href="http://thinktostart.com/predict-social-network-influence-with-r-and-h2o-ensemble-learning/">Ensemble learning with R and H2o : Social network influence case study</a>.
