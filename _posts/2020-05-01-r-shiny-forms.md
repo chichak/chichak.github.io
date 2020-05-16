@@ -10,4 +10,4 @@ Mimicking a <strong>Google Form</strong> with a Shiny app :
 
 Use R with <strong>H2O</strong> for your machine learning projects:
 
-<a href="http://thinktostart.com/predict-social-network-influence-with-r-and-h2o-ensemble-learning/">Ensemble learning with R and H2o : Social network influence case study</a>.
+Ensemble learning with R and H2O : <a href="http://thinktostart.com/predict-social-network-influence-with-r-and-h2o-ensemble-learning/">Social network influence case study</a>.
