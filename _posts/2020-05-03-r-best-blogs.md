@@ -15,5 +15,9 @@
   <p>
   This is a good place where <strong>noobes</strong> can learn R.
   </p>
+  <li><a href="https://js4shiny.com/resources/links/searchable/">JS 4 Shiny</a></li>
+  <p>
+  <strong>Javascript</strong> for Shiny developers. Here you can find many useful libraries, books and articles about JS stuff ready to use in your shiny applications.
+  </p>
 </ul>
 
