@@ -1,4 +1,4 @@
-xFirst thing to do before we start coding, let's prepare our machine.
+First thing to do before we start coding, let's prepare our machine.
 
 1) install R
 2) install miniconda :
