@@ -1,6 +1,6 @@
 ## This is the code to build maps for morocco 12 states.
 The geojson file is located here : 
-<a href= "https://github.com/chichak/Covid19-MA/blob/master/ma-convid19-state.geojson"> geojson file link </a>
+<a href= "https://raw.githubusercontent.com/chichak/Covid19-MA/master/ma-convid19-state.geojson"> geojson file link </a>
 
 ![png](/images/morocco.png)
 
@@ -53,5 +53,45 @@ ggplotly(ggplot() +
 # 
 # geom_polygon(data = subset(bundes_unemp, id == "Berlin")) 
 ```
+```R
+Or using highchart
+
+library("highcharter")
+
+library("geojsonio")
+
+library("httr")
 
 
+######################################################################################################
+
+maroc <- "https://raw.githubusercontent.com/chichak/Covid19-MA/master/ma-convid19-state.geojson" %>% 
+  GET() %>% 
+  content() %>% 
+  jsonlite::fromJSON(simplifyVector = FALSE)
+
+maroc$features[[1]]$properties
+
+dfmaroc <-  maroc$features %>% 
+  map_df(function(x){
+    as_data_frame(x$properties)
+  })
+
+
+names(dfmaroc) <- c("ID", "arname", "frname", "totalcas", "active", "deaths", "recovered", "fill", "opacity")
+dfmaroc
+
+highchart(type = "map") %>% 
+    hc_add_series_map(map = maroc, df = dfmaroc, joinBy = "ID", value = "active")%>%
+  # hc_colorAxis(stops = color_stops(n = 12, colors = c("#008a39","#fabf37", "#ffe675","#fad739", "#ffb459" , "#fd2549")))%>%
+   hc_colorAxis(stops = color_stops()) %>%
+   hc_tooltip(useHTML = TRUE, headerFormat = "",
+              pointFormat = "Le nombre des cas actifs à {point.frname} est: {point.active}")
+  # hc_add_series(mapData = maroc, showInLegend = FALSE) %>%
+  #hc_add_series(data = dfmaroc, type = "mappoint",
+                                #name = "Airports", tooltip = list(pointFormat = "{point.active}")) 
+  
+######################################################################################################
+```
+
+![png](/images/mapplot.png)
