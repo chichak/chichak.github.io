@@ -1,4 +1,4 @@
-h2(Intro to Modeling)
+<em>Intro to Modeling</em>
 
 <div><p>At this point in our learning journey, we have experience loading data into R, cleaning and preparing data, and exploring data through visualization and analysis. We applied statistical techniques to form a deeper understanding of our data by estimating characteristics like the median and standard deviation. We generated frequency distributions and confidence intervals to describe our data. In this series of missions, we will expand upon that knowledge to build models that estimate, or predict, an <em>output</em> based on the value of an <em>input</em>.</p>
 <p>Why would we want to build a model to predict the value of an output variable? Models provide a way to summarize or describe general patterns in a dataset, and these patterns can be used to estimate future outcomes. For example, we might use modeling to estimate sales growth based on the increase in advertizing budget at a company we work for. Or we could build a model to predict the total cost for an Uber ride based on distance traveled, using data from previous car trips. </p>
