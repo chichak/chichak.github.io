@@ -7,9 +7,11 @@
 <p>Which x-axis variable (<code>date</code> or <code>distance</code>) from the two plots that we generated earlier will likely have the greatest amount of error if we apply a linear regression model to estimate <code>cost</code>? </p>
 <p></p><center><img alt="Cost vs. date vs. distance" src="https://dq-content.s3.amazonaws.com/454/grid.png"></center><p></p></div>
 
-<div class="ScrollAccordion__section"><div theme="light" class="ScrollAccordion__in_text SidePanelTitle__light" style="opacity: 1;" id="onboarding-tip-instructions">instructions</div><iframe style="height: 100%; width: 100%; border: none; background: transparent; position: absolute; z-index: -1; top: 0px; left: 0px;"></iframe><div id="body" class="MissionLearn__instructions MissionMarkup__light"><ol>
+<em>Instructions</em>
+
+<ol>
 <li>Examine the two plots we generated earlier and select the plot that shows the x-axis variable (<code>date</code> or <code>distance</code>) that will likely result in the greater amount of error if we perform a linear regression to estimate <code>cost</code>. <ul>
 <li>Assign either the value <code>'scatter_plot'</code> or <code>'line_chart'</code> to the variable <code>greater_error</code>.</li>
 </ul>
 </li>
-</ol></div><div class="MissionLearn__section"><div theme="light" class="DqDropMenu__close"><div class="DqDropMenu__top" data-test-selector="GetHelpMenu"><div class="DqDropMenu__text">Get Help</div><div class="DqDropMenu__icon"><span class="dqicon dqicon-down undefined"></span></div></div><div class="DqDropMenu__options"><div class="DqDropMenu__option" data-test-selector="mission-help-get-hint">Get a hint</div><div class="DqDropMenu__option" title="[alt+a] to See the answer" data-test-selector="mission-help-show-answer">See the answer</div><div class="DqDropMenu__option">Community discussion</div></div></div></div></div>
+</ol>
