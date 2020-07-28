@@ -1,3 +1,5 @@
+<em>Prediction</em>
+
 <div><p>Looking at the two plots we generated, we observe that there does not appear to be any obvious relationship between <code>cost</code> and <code>date</code>, but there is a relationship between <code>cost</code> and <code>distance</code>. We've updated the titles, but these plots are otherwise identical to what we generated in the last exercise:</p>
 <p></p><center><img alt="Cost vs. date vs. distance" src="https://dq-content.s3.amazonaws.com/454/grid.png"></center><p></p>
 <p>Let's break-down each plot individually. With regards to <code>date</code>, suppose we take an Uber trip from our home to the same destination every day. We would expect that this trip would cost rougly the same each time. Sure there could be some variation day-to-day because of traffic levels, weather, or driver habits, for example, but overall we would expect the costs to be relatively consistent. The line chart we generated does not demonstrate any sort of stability or trend, something else must be influencing trip cost.  </p>
