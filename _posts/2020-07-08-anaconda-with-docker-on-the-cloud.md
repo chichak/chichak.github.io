@@ -1,7 +1,8 @@
 <ul>
   <li>1. Create your droplet</li>
 <li>2. Mount/install your ubuntu server with docker</li>
-  <li>3. docker pull continuumio/anaconda3</li>
+  <li>3. If you have an account on docker hub then : docker login</li>
+  <li>4. docker pull continuumio/anaconda3</li>
   </ul>
  ```R
     # Run your docker image
@@ -20,6 +21,7 @@
 
 <ul>
   <h3> Docker Bonus</h3>
+  
   <li> To list all docker downloaded images : sudo docker images</li>
   <li> To see running containers : sudo docker ps (-a) </li>
   <li> to stop running container : sudo docker stop ID</li>
