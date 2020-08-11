@@ -1,20 +1,20 @@
 <div>
       <h1><span class="label">Chapter 2. </span>Online Streaming Experiment</h1>
 
-      <p>With Early Release ebooks, you get books in their earliest form—the author’s raw and unedited content as they write—so you can take advantage of these technologies long before the official release of these titles.</p>
+      <p> With Early Release ebooks, you get books in their earliest form—the author’s raw and unedited content as they write—so you can take advantage of these technologies long before the official release of these titles.</p>
 
-      <p>This will be the 8th chapter of the final book. Please note that the GitHub repo will be made active later on.</p>
+      <p> This will be the 8th chapter of the final book. Please note that the GitHub repo will be made active later on.</p>
 
-      <p>If you have comments about how we might improve the content and/or examples in this book, or if you notice missing material within this chapter, please reach out to the author at <a href="mailto:florent.buisson.oreilly@maskedmails.com">florent.buisson.oreilly@maskedmails.com</a>.</p>
-      </div></aside>
+      <p> If you have comments about how we might improve the content and/or examples in this book, or if you notice missing material within this chapter, please reach out to the author at <a href="mailto:florent.buisson.oreilly@maskedmails.com">florent.buisson.oreilly@maskedmails.com</a>.</p>
+      </div>
 
 
-      <p>Digital A/B tests such as AirCnC’s 1-click button are the simplest and easiest to implement, so we’ll first see how to do one from A to Z. This doesn’t mean that there aren’t opportunities to mess it up and end up with a useless experiment, so we’ll have to be careful! Making your experiment a success starts much before any customer or employee sees your treatment.</p>
-      <aside data-type="sidebar" epub:type="sidebar"><div class="sidebar" id="idm45802653602776">
+      <p> Digital A/B tests such as AirCnC’s 1-click button are the simplest and easiest to implement, so we’ll first see how to do one from A to Z. This doesn’t mean that there aren’t opportunities to mess it up and end up with a useless experiment, so we’ll have to be careful! Making your experiment a success starts much before any customer or employee sees your treatment.</p>
+      
         <h5>Sidebar</h5>
         <p>The vocabulary of experimental design owes much to its statistical and scientific roots. I’ll talk of “control” and “treatment” groups as well as “interventions”, which may sound ominous or overkill when we’re really discussing the position of a button on a website or the amount of a discount. When talking about experiments in general, there isn’t much I can do to use a simpler vocabulary; but when you’re talking to your business partners about a specific experiment, I would encourage you to stick with concrete terms relating to that experiment (e.g. “the old and the new creatives”, “the group with the lower discount and the group with the higher discount”, etc.). </p>
         <p>Anecdote: once when I suggested an “intervention”, a business partner thought I meant that they were not doing their job well and I needed to intervene. Not the best starting point for a fruitful and trusting relationship. Take people where they are and make an effort to speak their language instead of expecting them to know yours. </p>
-      </div></aside>
+      </div>
       <p>In the first section, we’ll review carefully how to plan the experiment, which involves understanding what you’re testing as well as your criteria for success and what makes you believe your experiment will be a success. </p>
       <p>In the second section, we’ll then determine our sample size, the number of customers (experimental psychologists would say “subjects”) we need to include in our experiment, as well as the “statistical power” of our experiment. In this section, I’ll do a deep dive into the meaning of statistical significance and I’ll show you how to use simulations instead of traditional statistics. That material will be heavier than usual, as I’ll introduce a number of concepts and methods that we’ll reuse for the other experiments, but if you stick around, I promise that you’ll never have to worry or puzzle over p-values ever again. </p>
       <p>Finally, in the third section, we’ll analyze our experimental data, using a traditional test of proportions and then a logistic regression.</p>
