@@ -1,8 +1,9 @@
 ---
-layout: home
-author_profile: true
+title: DevOps
+permalink: /DevOps/
 header:
-	image:"/images/banner.png"
+  image: /images/banner.png
+published: true
 ---
 
 <ul>
@@ -12,3 +13,4 @@ header:
     </li>
   {% endfor %}
 </ul> 
+
