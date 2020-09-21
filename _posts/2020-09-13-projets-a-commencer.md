@@ -1,6 +1,6 @@
-Il y a plein de projet à réaliser, notemment bcp de topics à découvrir. Ici je vais mettre les liens des topics que je vais travailler prochainement.
+Il y a plein de projet à réaliser, notemment bcp de topics à découvrir. Ici je vais mettre les liens des topics à voir prochainement.
 
-<h2>Linear Programming using PuLP - Solve timetable schedualing</h2>
+<h2>Linear Programming using PuLP - Solve timetable scheduling</h2>
 <ul>
 <li>https://www.freecodecamp.org/news/introducing-timeboard-a-python-business-calendar-package-a2335898c697/</li>
 <li>https://github.com/timnon/pyschedule</li>
