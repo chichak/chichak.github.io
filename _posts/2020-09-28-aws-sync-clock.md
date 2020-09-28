@@ -5,32 +5,32 @@
 
 1. To install NTP, simply choose one of the following, depending on your distribution
 
-''' 
+``` 
 apt-get install ntp
-'''
+```
 
 2. Configure NTP to use amazon servers, like so:
 
-'''
+```
 vim /etc/ntp.conf
-'''
+```
 
 3. And in it, comment out the default servers and add these:
 
-'''
+```
 server 0.amazon.pool.ntp.org iburst
 server 1.amazon.pool.ntp.org iburst
 server 2.amazon.pool.ntp.org iburst
 server 3.amazon.pool.ntp.org iburst
 
-'''
+```
  
 4. And then restart ntp service:
 
-'''
+```
 sudo service ntp restart
-'''
+```
 
-[Source](https://www.allcloud.io/how-to/how-to-fix-amazon-s3-requesttimetooskewed/)
-[Source](https://www.digitalocean.com/community/tutorials/how-to-set-up-time-synchronization-on-ubuntu-12-04)
+[Source - allcloud](https://www.allcloud.io/how-to/how-to-fix-amazon-s3-requesttimetooskewed/)
+[Source - DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-set-up-time-synchronization-on-ubuntu-12-04)
 
