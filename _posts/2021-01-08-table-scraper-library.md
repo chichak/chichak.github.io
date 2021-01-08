@@ -96,3 +96,4 @@ class Es:
             writer.writerows(self.parsed_data)
         print('Data Saved in data'+str(t_number)+'.csv file')
 ```
+<p>Credits : https://github.com/issamoxix/EzScraper</p>
