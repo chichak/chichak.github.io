@@ -89,7 +89,7 @@
 - **Sujet** : Conception et implémentation d'un SIG sous R (SIG - R) - **DataPatchwork**.
  - **email/Tél**: houmanehajar99@gmail.com - 0677653534
 - Etat d'avancement:
-  - Not yet
+  - Fraud detection - EDA - Git
   - Présence
 ---
 
