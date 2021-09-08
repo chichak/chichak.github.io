@@ -1,4 +1,4 @@
-Key points in a data science course : 
+Key points in a data science course (deep understanding) : 
 
 <ol>
 <li> Type of variables (numerical, categorical - continuous, discrete)</li>
