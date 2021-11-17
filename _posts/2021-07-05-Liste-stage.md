@@ -113,3 +113,17 @@
   - Sujet défini
   - Book sent
   - 
+
+11- **German company** : 2 months project
+- **email/Tél**: saadmaatouf4@gmail.com - 0624303070
+- **Sujet** : Estimation of market value of firm's equity (`Python - Matlab`)
+
+---
+
+12- **German company** : 2 months project
+- **email/Tél**: saadmaatouf4@gmail.com - 0624303070
+- **Sujet** : Trading Bot based on tfx api (`Python - js`)
+
+---
+
+13- Analyse du marché de travail l'analyse NLP des offres sur la toile.
