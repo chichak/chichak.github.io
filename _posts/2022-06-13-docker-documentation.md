@@ -10,4 +10,5 @@
 - **List all installed images :** sudo docker images 
 - **List all running images :** sudo docker container ls
 - **Start an image :** sudo docker start --id
+  - **example :** docker run -d -p 4444:4444 -p 7900:7900 --shm-size="2g" selenium/standalone-firefox:4.2.2-20220609
 - **Stop an image :** sudo docker stop --id
