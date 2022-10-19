@@ -1,4 +1,9 @@
-
+---
+layout: post
+title:  "Live Coding"
+categories: [blog, AI]
+tags: [coding, live code]
+---
 
 
 # Welcome
