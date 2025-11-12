@@ -5,7 +5,7 @@
 
 # 📚 Recommended Books
 
-### ✅ Refactoring UI — Adam Wathan & Steve Schoger  
+### ✅ Refactoring UI — Adam Wathan & Steve Schoger  [Book](https://online.fliphtml5.com/uejlb/wnsd/#p=1)
 A practical, visual guide to design for developers.
 
 ### ✅ HTML & CSS + JavaScript & jQuery — Jon Duckett  
