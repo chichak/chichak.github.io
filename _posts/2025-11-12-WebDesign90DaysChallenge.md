@@ -1,6 +1,50 @@
 # Web Design Mastery — 3-Month Study Guide  
 **4 hours per day • Project-based learning • From fundamentals to professional UI design**
 
+Your diverse interests aren't the problem—they're your superpower. The issue isn't lack of focus, but lack of containment. You need a system that honors your curiosity while forcing completion. Here's a battle-tested framework:
+
+# The "90-Day Monogamy with Open Relationship Fridays" System
+
+Core Principle: Marry ONE primary project for 90 days, but schedule sanctioned affairs.
+
+## Weekly Architecture (the non-negotiable skeleton):
+### Monday-Thursday: Deep Monogamy (4 hours/day)
+
+Pick one project that matters most right now (e.g., finishing that coding project). This is your "North Star."
+Block 8am-12pm (or your peak hours) for only this. No trading, no reading articles, no side quests.
+Use Focusmate or similar if you can't trust yourself. The cost of switching is a $50 donation to a cause you hate.
+
+### Friday: "Curiosity Buffet Day"
+
+This is your release valve. Dedicate the entire day to exploring: read that new trading strategy, research content ideas, test gym programs.
+New ideas go into a "Someday/Maybe" list (see tools below). You only touch them after noon on Friday.
+### Weekends: Family & Maintenance Mode
+
+Fatherhood is the project. Be fully present.
+
+### Sunday evening: 30-minute weekly review (non-negotiable).
+Daily Triage Ritual (10 minutes, every morning):
+What is the ONE thing that makes everything else easier or irrelevant today? (From Gary Keller's book)
+Which 3 tasks move my 90-day project forward? Write them on a physical sticky note.
+Energy check: Gym is non-negotiable, but when? Morning workout = better focus. Evening = stress relief. Schedule it like a meeting.
+
+## Tools for Your Specific Chaos:
+
+Capture everything: Use Todoist (not Notion—too fiddly). Quick-add on phone: @coding, @trading, @content tags. This offloads the mental RAM.
+Shiny Object Syndrome: When a new idea hits, you don't suppress it. You capture it in 30 seconds into Todoist with a tag, then immediately return to your One Thing. The idea waits for Friday.
+
++ Trading: Only during your "Buffet" time or pre-scheduled 30-min review sessions. No charts open during deep work.
++ Content Creation: Batch it. 2 hours on Friday = 5 posts. Don't create daily.
++ Reading: Audiobooks during gym/commute. Physical reading only before bed (30 min max).
+### The 90-Day Cycle:
+
+At the end of each cycle, ask: Did I finish or ship something? If not, you either:
+Picked too big a project (break it down), or
+Didn't protect your deep work hours (get an accountability partner).
+
+Your first 90 days: Pick the project that, if completed, would make you feel like a legend. Forget "balance"—think sequencing. The trading algorithm, the SaaS app, the book—one must win. The others wait their turn.
+Start tomorrow. Protect 4 hours. The rest of your life happens around that.
+
 ---
 
 # 📚 Recommended Books
