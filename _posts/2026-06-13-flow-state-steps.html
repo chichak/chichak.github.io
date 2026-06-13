@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 7 Steps to Achieve Flow</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.4);
+            --multiplier-bg: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(56, 189, 248, 0.1), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.1), transparent 25%);
+            background-attachment: fixed;
+        }
+
+        header {
+            text-align: center;
+            padding: 100px 20px 60px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #38bdf8, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px 100px;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border-color: var(--accent);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 4px;
+            background: linear-gradient(90deg, #38bdf8, transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .step-number {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .timestamp {
+            font-size: 0.85rem;
+            font-weight: 400;
+            background: rgba(56, 189, 248, 0.15);
+            color: var(--accent);
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .multipliers-section {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 50px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .multipliers-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            background: var(--multiplier-bg);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .multipliers-section > p {
+            color: var(--text-muted);
+            margin-bottom: 40px;
+        }
+
+        .multiplier-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .multiplier-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: left;
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .multiplier-card:hover {
+            transform: scale(1.02);
+            background: rgba(139, 92, 246, 0.05);
+        }
+
+        .multiplier-card h3 {
+            color: #a78bfa;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Animation Classes */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .multipliers-section { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>The 7 Steps to Achieve Flow</h1>
+        <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
+            Transform how you work by mastering the mechanics of deep focus. Follow these steps to build conditions where flow naturally occurs.
+        </p>
+    </header>
+
+    <main class="container">
+        <section class="steps-grid">
+            
+            <div class="card animate-on-scroll">
+                <div class="step-number">01 <span class="timestamp">[01:04]</span></div>
+                <h3>Pick a clear, specific task</h3>
+                <p>Flow hates vagueness. Instead of a vague goal like "work on a project," set a concrete target like "draft three opening slides." Clarity directs your attention, which is the raw material of flow.</p>
+            </div>
+
+            <div class="card animate-on-scroll">
+                <div class="step-number">02 <span class="timestamp">[01:37]</span></div>
+                <h3>Set difficulty just beyond your skill</h3>
+                <p>Aim for the "Goldilocks zone." If a task is too easy, you'll get bored; if it's too hard, you'll get anxious. You want to find the spot where you are stretched, but not snapped.</p>
+            </div>
+
+            <div class="card animate-on-scroll">
+                <div class="step-number">03 <span class="timestamp">[02:20]</span></div>
+                <h3>Work during your peak hours</h3>
+                <p>Our days move through three stages: peak, trough, and recovery. For most people, mornings are the peak. Protect this high-energy time for your most important deep work, and save your lower-energy hours for routine tasks.</p>
+            </div>
+
+            <div class="card animate-on-scroll">
+                <div class="step-number">04 <span class="timestamp">[02:52]</span></div>
+                <h3>Remove every obvious distraction</h3>
+                <p>If your phone is on your desk, you are doing interrupted work, not deep work. Stick your phone in a drawer, turn off notifications, and stick to one tab. Fix your environment to capture your focus.</p>
+            </div>
+
+            <div class="card animate-on-scroll">
+                <div class="step-number">05 <span class="timestamp">[03:36]</span></div>
+                <h3>Block 60–90 minutes</h3>
+                <p>Flow has a delay. The first 15 to 20 minutes will feel difficult as your brain resists and scans for distractions. Expect the discomfort and stick with it—if you quit early, you quit right before it gets good.</p>
+            </div>
+
+            <div class="card animate-on-scroll">
+                <div class="step-number">06 <span class="timestamp">[04:12]</span></div>
+                <h3>Start before you feel ready</h3>
+                <p>This is the most critical step. Motivation is not a prerequisite to starting; it's a result of taking action. Action comes first, focus follows, and then flow arrives.</p>
+            </div>
+
+            <div class="card animate-on-scroll">
+                <div class="step-number">07 <span class="timestamp">[04:43]</span></div>
+                <h3>Track visible progress</h3>
+                <p>Keep a running tally of your output (like a word count) or physically check things off a list. Seeing forward motion prevents your brain from drifting and keeps you in the game.</p>
+            </div>
+
+        </section>
+
+        <section class="multipliers-section animate-on-scroll">
+            <h2>2 Multipliers to Deepen Focus</h2>
+            <p>Once you are working, use these two additions to elevate the quality of your output:</p>
+
+            <div class="multiplier-grid">
+                <div class="multiplier-card">
+                    <h3>Ritual <span class="timestamp" style="background: rgba(139, 92, 246, 0.2);">[05:16]</span></h3>
+                    <p style="color: var(--text-muted);">Use the exact same physical place, desk setup, and opening move every day. This doesn't force focus; it triggers it.</p>
+                </div>
+                <div class="multiplier-card">
+                    <h3>Purpose <span class="timestamp" style="background: rgba(139, 92, 246, 0.2);">[05:24]</span></h3>
+                    <p style="color: var(--text-muted);">Ask yourself, "Why does this matter?" and "Who benefits?" This small shift turns pure effort into genuine engagement.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Intersection Observer for scroll animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Add class to trigger animation
+                        entry.target.classList.add('is-visible');
+                        // Stop observing once animated
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const animatedElements = document.querySelectorAll('.animate-on-scroll');
+            
+            // Add staggered delay to cards if they appear at the same time
+            animatedElements.forEach((el, index) => {
+                if(el.classList.contains('card')) {
+                    el.style.transitionDelay = `${(index % 3) * 0.15}s`;
+                }
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
