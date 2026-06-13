@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The 7 Steps to Achieve Flow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --abyss:#080B14;
+    --deep:#0E1422;
+    --panel:#131B2D;
+    --line:#1F2A40;
+    --text:#EAEEF7;
+    --muted:#8290AC;
+    --faint:#566179;
+    --cool:#5EEAD4;   /* effort */
+    --warm:#F5B544;   /* flow */
+    --cool-dim:rgba(94,234,212,.14);
+    --warm-dim:rgba(245,181,68,.14);
+    --maxw:760px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--abyss);
+    color:var(--text);
+    font-family:"Hanken Grotesk",system-ui,sans-serif;
+    font-weight:400;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  /* ambient flowing background */
+  #ambient{
+    position:fixed;inset:0;width:100%;height:100%;
+    z-index:0;opacity:.55;pointer-events:none;
+  }
+  .vignette{
+    position:fixed;inset:0;z-index:1;pointer-events:none;
+    background:radial-gradient(120% 80% at 50% -10%, transparent 40%, rgba(8,11,20,.7) 100%),
+               linear-gradient(180deg, transparent 60%, var(--abyss) 100%);
+  }
+
+  .wrap{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;padding:0 28px}
+
+  /* ---------- hero ---------- */
+  .hero{
+    min-height:100svh;display:flex;flex-direction:column;
+    justify-content:center;padding:80px 0 60px;
+  }
+  .eyebrow{
+    font-family:"JetBrains Mono",monospace;
+    font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;
+    color:var(--cool);font-weight:500;
+  }
+  .hero .eyebrow{margin-bottom:26px;opacity:0;animation:rise .9s .1s cubic-bezier(.2,.7,.2,1) forwards}
+  h1{
+    font-family:"Instrument Serif",serif;font-weight:400;
+    font-size:clamp(3.1rem,11vw,6.2rem);line-height:.98;
+    letter-spacing:-.01em;color:var(--text);
+  }
+  h1 .l{display:block;opacity:0;animation:rise 1s cubic-bezier(.2,.7,.2,1) forwards}
+  h1 .l:nth-child(1){animation-delay:.22s}
+  h1 .l:nth-child(2){animation-delay:.34s}
+  h1 em{
+    font-style:italic;position:relative;
+    background:linear-gradient(95deg,var(--cool),var(--warm));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .lede{
+    margin-top:30px;max-width:46ch;color:var(--muted);
+    font-size:1.12rem;opacity:0;animation:rise 1s .5s cubic-bezier(.2,.7,.2,1) forwards;
+  }
+  .scrollcue{
+    margin-top:54px;display:flex;align-items:center;gap:14px;
+    font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--faint);
+    opacity:0;animation:rise 1s .8s cubic-bezier(.2,.7,.2,1) forwards;
+  }
+  .scrollcue .track{width:34px;height:1px;background:linear-gradient(90deg,var(--faint),transparent);position:relative;overflow:hidden}
+  .scrollcue .track::after{content:"";position:absolute;top:0;left:0;height:1px;width:12px;background:var(--cool);animation:slide 2.2s infinite}
+
+  @keyframes rise{to{opacity:1;transform:none}}
+  h1 .l,.lede,.hero .eyebrow,.scrollcue{transform:translateY(18px)}
+  @keyframes slide{0%{left:-12px}60%,100%{left:34px}}
+
+  /* ---------- timeline ---------- */
+  .timeline{position:relative;padding:30px 0 40px}
+  .rail{
+    position:absolute;left:13px;top:0;bottom:0;width:2px;z-index:0;
+  }
+  .rail .base{position:absolute;inset:0;background:var(--line);border-radius:2px}
+  .rail .fill{
+    position:absolute;left:0;top:0;width:100%;height:0;border-radius:2px;
+    background:linear-gradient(180deg,var(--cool) 0%,var(--cool) 62%,#a9d9a8 72%,var(--warm) 82%,var(--warm) 100%);
+    background-repeat:no-repeat;background-position:top left;
+    box-shadow:0 0 16px rgba(94,234,212,.35);
+    transition:height .12s linear;
+  }
+  .orb{
+    position:absolute;left:14px;top:0;width:13px;height:13px;border-radius:50%;
+    transform:translate(-50%,-50%);background:#fff;z-index:3;
+    box-shadow:0 0 0 4px rgba(94,234,212,.18),0 0 22px 5px rgba(94,234,212,.6);
+    transition:top .12s linear, box-shadow .5s ease, background .5s ease;
+  }
+  .orb.warm{box-shadow:0 0 0 4px rgba(245,181,68,.2),0 0 24px 6px rgba(245,181,68,.6)}
+
+  ol.steps{list-style:none;position:relative;z-index:1}
+  .step{position:relative;padding:0 0 64px 56px}
+  .step:last-child{padding-bottom:20px}
+
+  .node{
+    position:absolute;left:0;top:2px;width:28px;height:28px;border-radius:50%;
+    background:var(--deep);border:1.5px solid var(--line);
+    display:grid;place-items:center;transition:all .5s cubic-bezier(.2,.7,.2,1);
+  }
+  .node .dot{width:7px;height:7px;border-radius:50%;background:var(--faint);transition:all .5s}
+  .step.on .node{border-color:var(--cool);box-shadow:0 0 0 5px var(--cool-dim),0 0 18px rgba(94,234,212,.4)}
+  .step.on .node .dot{background:var(--cool);box-shadow:0 0 10px var(--cool)}
+  .step.warm.on .node{border-color:var(--warm);box-shadow:0 0 0 5px var(--warm-dim),0 0 18px rgba(245,181,68,.45)}
+  .step.warm.on .node .dot{background:var(--warm);box-shadow:0 0 10px var(--warm)}
+
+  .card{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+  .step.on .card{opacity:1;transform:none}
+
+  .num{
+    font-family:"JetBrains Mono",monospace;font-size:.74rem;font-weight:500;
+    letter-spacing:.18em;color:var(--cool);
+  }
+  .step.warm .num{color:var(--warm)}
+  .step h3{
+    font-family:"Instrument Serif",serif;font-weight:400;
+    font-size:clamp(1.7rem,4.6vw,2.35rem);line-height:1.12;
+    margin:6px 0 12px;letter-spacing:-.005em;
+  }
+  .step p.body{color:var(--muted);font-size:1.04rem;max-width:54ch}
+  .step p.body strong{color:var(--text);font-weight:600}
+
+  /* flow-channel inset (step 2) */
+  .channel{
+    margin-top:22px;background:linear-gradient(180deg,var(--deep),var(--panel));
+    border:1px solid var(--line);border-radius:14px;padding:18px 20px 14px;
+    max-width:340px;
+  }
+  .channel .cap{
+    font-family:"JetBrains Mono",monospace;font-size:.64rem;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--faint);margin-bottom:8px;
+  }
+  .channel svg{width:100%;height:auto;display:block;overflow:visible}
+  .step.on .ch-band{stroke-dashoffset:0}
+  .ch-band{stroke-dasharray:420;stroke-dashoffset:420;transition:stroke-dashoffset 1.4s .3s ease}
+  .ch-you{transform-origin:center;transform-box:fill-box}
+  .step.on .ch-you{animation:bob 3.4s 1.6s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translate(0,0)}50%{transform:translate(4px,-4px)}}
+  .ch-lab{font-family:"JetBrains Mono",monospace;font-size:8px;letter-spacing:.08em;fill:var(--faint)}
+
+  /* energy sparkline (step 3) */
+  .energy{display:flex;align-items:center;gap:14px;margin-top:18px;flex-wrap:wrap}
+  .energy svg{height:42px;width:200px}
+  .energy .keys{display:flex;gap:16px;font-family:"JetBrains Mono",monospace;font-size:.66rem;letter-spacing:.08em;color:var(--faint)}
+  .energy .keys b{color:var(--cool);font-weight:500}
+
+  /* ---------- multipliers ---------- */
+  .mult{padding:30px 0 90px;position:relative;z-index:2}
+  .mult .head{margin-bottom:30px}
+  .mult .head .eyebrow{color:var(--warm)}
+  .mult h2{
+    font-family:"Instrument Serif",serif;font-weight:400;
+    font-size:clamp(2rem,6vw,2.8rem);line-height:1.05;margin-top:14px;letter-spacing:-.01em;
+  }
+  .mult h2 em{font-style:italic;color:var(--warm)}
+  .mult .sub{color:var(--muted);margin-top:12px;max-width:50ch}
+  .cards{display:grid;gap:18px;grid-template-columns:1fr 1fr;margin-top:34px}
+  .mcard{
+    background:linear-gradient(165deg,var(--panel),var(--deep));
+    border:1px solid var(--line);border-radius:18px;padding:26px 24px;
+    position:relative;overflow:hidden;
+    opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);
+  }
+  .mcard.on{opacity:1;transform:none}
+  .mcard:nth-child(2){transition-delay:.12s}
+  .mcard::before{
+    content:"×";position:absolute;top:-14px;right:6px;
+    font-family:"Instrument Serif",serif;font-size:5rem;color:var(--warm);opacity:.13;line-height:1;
+  }
+  .mcard .tag{font-family:"JetBrains Mono",monospace;font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--warm)}
+  .mcard h4{font-family:"Instrument Serif",serif;font-weight:400;font-size:1.7rem;margin:10px 0 10px}
+  .mcard p{color:var(--muted);font-size:.98rem}
+  .mcard p em{color:var(--text);font-style:italic}
+
+  footer{
+    border-top:1px solid var(--line);padding:34px 0 60px;
+    display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+    font-family:"JetBrains Mono",monospace;font-size:.7rem;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--faint);
+  }
+  footer .glow{color:var(--warm)}
+
+  @media (max-width:560px){
+    .cards{grid-template-columns:1fr}
+    .step{padding-left:50px}
+    .lede{font-size:1.02rem}
+  }
+
+  /* accessibility */
+  a:focus-visible,.mcard:focus-visible{outline:2px solid var(--cool);outline-offset:4px;border-radius:6px}
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+    html{scroll-behavior:auto}
+    h1 .l,.lede,.hero .eyebrow,.scrollcue{opacity:1;transform:none}
+    .card,.mcard{opacity:1;transform:none}
+    .ch-band{stroke-dashoffset:0}
+    #ambient{display:none}
+  }
+</style>
+</head>
+<body>
+<canvas id="ambient" aria-hidden="true"></canvas>
+<div class="vignette" aria-hidden="true"></div>
+
+<div class="wrap">
+
+  <!-- HERO -->
+  <header class="hero">
+    <p class="eyebrow">Deep Work · A Field Guide</p>
+    <h1>
+      <span class="l">The 7 Steps to</span>
+      <span class="l">Achieve <em>Flow</em></span>
+    </h1>
+    <p class="lede">Flow doesn't arrive on demand. It's built — one deliberate decision at a time. Follow the descent below: clarity first, then focus, then the current takes you.</p>
+    <div class="scrollcue"><span class="track"></span>Begin the descent</div>
+  </header>
+
+  <!-- TIMELINE -->
+  <section class="timeline" aria-label="The seven steps">
+    <div class="rail" aria-hidden="true">
+      <div class="base"></div>
+      <div class="fill" id="fill"></div>
+    </div>
+    <div class="orb" id="orb" aria-hidden="true"></div>
+
+    <ol class="steps">
+
+      <li class="step" data-step="1">
+        <div class="node" aria-hidden="true"><span class="dot"></span></div>
+        <div class="card">
+          <span class="num">STEP 01</span>
+          <h3>Pick a clear, specific task</h3>
+          <p class="body">Flow hates vagueness. Instead of "work on a project," set a concrete target like <strong>"draft three opening slides."</strong> Clarity directs your attention — and attention is the raw material of flow.</p>
+        </div>
+      </li>
+
+      <li class="step" data-step="2">
+        <div class="node" aria-hidden="true"><span class="dot"></span></div>
+        <div class="card">
+          <span class="num">STEP 02</span>
+          <h3>Set difficulty just beyond your skill</h3>
+          <p class="body">Aim for the <strong>Goldilocks zone.</strong> Too easy and you'll get bored; too hard and you'll get anxious. Find the spot where you're stretched, but not snapped.</p>
+          <div class="channel">
+            <div class="cap">The Flow Channel</div>
+            <svg viewBox="0 0 300 170" role="img" aria-label="Diagram of the flow channel between anxiety and boredom">
+              <!-- axes -->
+              <line x1="34" y1="14" x2="34" y2="146" stroke="#2a3650" stroke-width="1.5"/>
+              <line x1="34" y1="146" x2="286" y2="146" stroke="#2a3650" stroke-width="1.5"/>
+              <!-- flow channel band -->
+              <path class="ch-band" d="M34 146 L286 14" fill="none" stroke="url(#g)" stroke-width="22" stroke-linecap="round" opacity=".9"/>
+              <path d="M34 146 L286 14" fill="none" stroke="url(#g)" stroke-width="22" stroke-linecap="round" opacity=".12"/>
+              <!-- labels -->
+              <text class="ch-lab" x="46" y="30">ANXIETY</text>
+              <text class="ch-lab" x="214" y="138">BOREDOM</text>
+              <text class="ch-lab" x="150" y="92" fill="#5EEAD4" text-anchor="middle">FLOW</text>
+              <text class="ch-lab" x="160" y="166" text-anchor="middle">SKILL →</text>
+              <text class="ch-lab" x="14" y="80" transform="rotate(-90 14 80)" text-anchor="middle">CHALLENGE ↑</text>
+              <!-- you -->
+              <circle class="ch-you" cx="150" cy="80" r="5.5" fill="#fff" stroke="#5EEAD4" stroke-width="2.5"/>
+              <defs>
+                <linearGradient id="g" x1="0" y1="1" x2="1" y2="0">
+                  <stop offset="0" stop-color="#5EEAD4"/>
+                  <stop offset="1" stop-color="#5EEAD4"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+      </li>
+
+      <li class="step" data-step="3">
+        <div class="node" aria-hidden="true"><span class="dot"></span></div>
+        <div class="card">
+          <span class="num">STEP 03</span>
+          <h3>Work during your peak hours</h3>
+          <p class="body">Our days move through three stages: <strong>peak, trough, and recovery.</strong> For most people, mornings are the peak. Protect that high-energy window for your most important deep work, and save the rest for email and meetings.</p>
+          <div class="energy">
+            <svg viewBox="0 0 200 42" aria-hidden="true">
+              <polyline points="0,12 50,8 100,34 150,30 200,20" fill="none" stroke="#5EEAD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="50" cy="8" r="3.5" fill="#5EEAD4"/>
+            </svg>
+            <div class="keys"><span><b>● Peak</b></span><span>Trough</span><span>Recovery</span></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="step" data-step="4">
+        <div class="node" aria-hidden="true"><span class="dot"></span></div>
+        <div class="card">
+          <span class="num">STEP 04</span>
+          <h3>Remove every obvious distraction</h3>
+          <p class="body">If your phone is on your desk, you're doing interrupted work — not deep work. Put the phone in a drawer, kill notifications, keep to <strong>one tab.</strong> Fix your environment so it captures your focus instead of fracturing it.</p>
+        </div>
+      </li>
+
+      <li class="step" data-step="5">
+        <div class="node" aria-hidden="true"><span class="dot"></span></div>
+        <div class="card">
+          <span class="num">STEP 05</span>
+          <h3>Block 60–90 minutes</h3>
+          <p class="body">Flow has a delay. The first <strong>15–20 minutes</strong> feel difficult as your brain resists and scans for easier escapes. Expect the discomfort and stay. Quit early and you quit right before it gets good.</p>
+        </div>
+      </li>
+
+      <li class="step warm" data-step="6">
+        <div class="node" aria-hidden="true"><span class="dot"></span></div>
+        <div class="card">
+          <span class="num">STEP 06 · FLOW ARRIVES</span>
+          <h3>Start before you feel ready</h3>
+          <p class="body">The most critical step. Motivation isn't a prerequisite for starting — it's a <strong>result</strong> of taking action. Action comes first, focus follows, and then flow arrives.</p>
+        </div>
+      </li>
+
+      <li class="step warm" data-step="7">
+        <div class="node" aria-hidden="true"><span class="dot"></span></div>
+        <div class="card">
+          <span class="num">STEP 07</span>
+          <h3>Track visible progress</h3>
+          <p class="body">Keep a running tally of your output — a word count, a checklist, a stack of finished pages. <strong>Seeing forward motion</strong> stops your brain from drifting and keeps you in the game.</p>
+        </div>
+      </li>
+
+    </ol>
+  </section>
+
+  <!-- MULTIPLIERS -->
+  <section class="mult" aria-label="Multipliers to deepen focus">
+    <div class="head">
+      <p class="eyebrow">Two Multipliers</p>
+      <h2>Once you're moving, <em>deepen</em> it</h2>
+      <p class="sub">The seven steps get you into flow. These two raise the ceiling on the quality of everything that comes out of it.</p>
+    </div>
+    <div class="cards">
+      <article class="mcard" tabindex="0">
+        <span class="tag">Multiplier 01</span>
+        <h4>Ritual</h4>
+        <p>Use the exact same place, desk setup, and opening move every day. It doesn't <em>force</em> focus — it <em>triggers</em> it.</p>
+      </article>
+      <article class="mcard" tabindex="0">
+        <span class="tag">Multiplier 02</span>
+        <h4>Purpose</h4>
+        <p>Ask <em>"Why does this matter?"</em> and <em>"Who benefits?"</em> That small shift turns pure effort into genuine engagement.</p>
+      </article>
+    </div>
+  </section>
+
+  <footer>
+    <span>The 7 Steps to Achieve Flow</span>
+    <span class="glow">Action first · Focus follows · Flow arrives</span>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ----- reveal + node activation ----- */
+  const steps = [...document.querySelectorAll('.step')];
+  const mcards = [...document.querySelectorAll('.mcard')];
+  if (reduce){
+    steps.forEach(s=>s.classList.add('on'));
+    mcards.forEach(c=>c.classList.add('on'));
+  } else {
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('on'); });
+    },{rootMargin:'0px 0px -22% 0px',threshold:.25});
+    steps.forEach(s=>io.observe(s));
+    mcards.forEach(c=>io.observe(c));
+  }
+
+  /* ----- traveling orb + line fill ----- */
+  const timeline = document.querySelector('.timeline');
+  const fill = document.getElementById('fill');
+  const orb = document.getElementById('orb');
+  const warmStep = document.querySelector('.step.warm');
+
+  function update(){
+    const r = timeline.getBoundingClientRect();
+    const mid = window.innerHeight * 0.5;
+    // progress of the viewport midpoint through the timeline block
+    let p = (mid - r.top) / r.height;
+    p = Math.max(0, Math.min(1, p));
+    const h = p * r.height;
+    fill.style.height = h + 'px';
+    fill.style.backgroundSize = '100% ' + r.height + 'px';
+    orb.style.top = h + 'px';
+    // switch orb to warm once it passes the first warm step's node
+    const wr = warmStep.getBoundingClientRect();
+    const passedWarm = (wr.top - r.top) < h;
+    orb.classList.toggle('warm', passedWarm);
+  }
+
+  if(!reduce){
+    update();
+    let ticking=false;
+    const onScroll=()=>{ if(!ticking){ requestAnimationFrame(()=>{update();ticking=false;}); ticking=true; } };
+    window.addEventListener('scroll',onScroll,{passive:true});
+    window.addEventListener('resize',update);
+  } else {
+    fill.style.height='100%'; orb.style.display='none';
+  }
+
+  /* ----- ambient flow field ----- */
+  if(!reduce){
+    const c = document.getElementById('ambient');
+    const ctx = c.getContext('2d');
+    let W,H,DPR,particles=[];
+    function resize(){
+      DPR=Math.min(window.devicePixelRatio||1,2);
+      W=c.width=innerWidth*DPR; H=c.height=innerHeight*DPR;
+      c.style.width=innerWidth+'px'; c.style.height=innerHeight+'px';
+    }
+    resize(); addEventListener('resize',resize);
+
+    const N = innerWidth<640?34:64;
+    for(let i=0;i<N;i++){
+      particles.push({
+        x:Math.random()*W, y:Math.random()*H,
+        s:(.15+Math.random()*.5)*DPR,   // speed
+        r:(.4+Math.random()*1.1)*DPR,   // radius
+        a:.05+Math.random()*.22,        // alpha
+        w:Math.random()*0.6             // warm/cool mix bias
+      });
+    }
+    // flow-field noise: slow drifting sine field
+    function field(x,y,t){
+      return Math.sin(x*0.0016 + t*0.0002) * 0.9 + Math.cos(y*0.0021 - t*0.00015) * 0.7;
+    }
+    let t=0;
+    function frame(){
+      t++;
+      ctx.clearRect(0,0,W,H);
+      for(const p of particles){
+        const ang = field(p.x,p.y,t);
+        p.x += Math.cos(ang)*p.s;
+        p.y += Math.sin(ang)*p.s + p.s*0.25; // gentle downward drift = "descent"
+        if(p.y>H+10){p.y=-10;p.x=Math.random()*W}
+        if(p.x<-10)p.x=W+10; if(p.x>W+10)p.x=-10;
+        // color: cool up high, warmer down low
+        const depth = p.y/H;
+        const col = depth>0.7
+          ? `rgba(245,181,68,${p.a})`
+          : `rgba(94,234,212,${p.a})`;
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+        ctx.fillStyle=col; ctx.fill();
+      }
+      requestAnimationFrame(frame);
+    }
+    frame();
+  }
+})();
+</script>
+</body>
+</html>
