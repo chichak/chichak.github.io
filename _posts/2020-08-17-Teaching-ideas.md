@@ -1,3 +1,8 @@
+---
+layout: single
+title: "Teaching Ideas"
+date: 2020-08-17
+---
 <div>
 <p>
 Here, in this article I am going to draw my teaching exeperience and how to make learning a fun and efficient experience.

@@ -1,3 +1,8 @@
+---
+layout: single
+title: "Droplets Conf For Shiny"
+date: 2020-05-03
+---
 
 <!DOCTYPE html>
 <html lang="en">

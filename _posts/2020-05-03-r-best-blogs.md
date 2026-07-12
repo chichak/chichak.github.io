@@ -1,3 +1,8 @@
+---
+layout: single
+title: "R Best Blogs"
+date: 2020-05-03
+---
 <h1 class="kb-article-title">Best blogs for R programming</h1>
 
 

@@ -1,3 +1,9 @@
+---
+layout: single
+title: "Big Data Concepts"
+date: 2021-01-08
+excerpt: "Working notes on the systems and ideas behind large-scale data processing."
+---
 <div class="content-body tutorial-content" data-growable-markdown="">
   
   <h3 id="introduction">Introduction</h3>

@@ -1,3 +1,8 @@
+---
+layout: single
+title: "Linear Regression Tenth"
+date: 2020-07-28
+---
 <script src='https://cdnjs.cloudflare.com/ajax/libs/" "mathjax/2.7.3/latest.js?config=default'></script> 
 
 <em>Recap</em>

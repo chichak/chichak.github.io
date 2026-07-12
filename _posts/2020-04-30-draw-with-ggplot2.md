@@ -1,3 +1,8 @@
+---
+layout: single
+title: "Set plot images to a nice size"
+date: 2020-04-30
+---
 
 
 

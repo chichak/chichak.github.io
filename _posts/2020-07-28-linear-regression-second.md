@@ -1,3 +1,8 @@
+---
+layout: single
+title: "Linear Regression Second"
+date: 2020-07-28
+---
 <em>Intro to Modeling - Example</em>
 
 <div><p>To build our intuition around modeling, let's use a motivating example. In this series of missions let's imagine that we live in the <a target="_blank" href="https://en.wikipedia.org/wiki/Brooklyn">Brooklyn borough</a> of New York City. We are interested in the real estate market and use Dataquest to learn data science so that we can analyze home sales data. </p>

@@ -1,3 +1,8 @@
+---
+layout: single
+title: "Linear Regression Sixth"
+date: 2020-07-28
+---
 <em>Error</em>
 
 <div><p>As mentioned briefly when we learned about prediction, it is near impossible for a model to be 100% accurate because of error. <strong>Error</strong> refers to the deviation of an observed value from the unobservable true value of the quantity of interest. Specifically, the accuracy of our prediction for <code>cost</code> depends on two types of error: <em>reducible error</em>, and <em>irreducible error</em>.</p>
