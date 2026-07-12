@@ -1,8 +1,3 @@
----
-layout: single
-title: "To activate this environment, use:"
-date: 2020-05-16
----
 First thing to do before we start coding, let's prepare our machine.
 
 1) install R

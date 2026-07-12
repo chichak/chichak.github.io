@@ -1,8 +1,3 @@
----
-layout: single
-title: "R Shiny Forms"
-date: 2020-05-01
----
 
 
 Mimicking a <strong>Google Form</strong> with a Shiny app : 

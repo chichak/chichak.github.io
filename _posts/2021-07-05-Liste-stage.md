@@ -1,8 +1,3 @@
----
-layout: single
-title: "Liste Stage"
-date: 2021-07-05
----
 **La liste des projets des stages de l'année 2021**
 
 ---

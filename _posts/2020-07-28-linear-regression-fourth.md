@@ -1,8 +1,3 @@
----
-layout: single
-title: "Linear Regression Fourth"
-date: 2020-07-28
----
 <em>Prediction</em>
 
 <div><p>Looking at the two plots we generated, we observe that there does not appear to be any obvious relationship between <code>cost</code> and <code>date</code>, but there is a relationship between <code>cost</code> and <code>distance</code>. We've updated the titles, but these plots are otherwise identical to what we generated in the last exercise:</p>

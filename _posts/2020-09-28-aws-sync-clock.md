@@ -1,8 +1,3 @@
----
-layout: single
-title: "Aws Sync Clock"
-date: 2020-09-28
----
 <p>If you are dealing with AWS s3 buckets, there is a common error which araises and tell you </p>
 >"botocore.exceptions.ClientError: An error occurred (RequestTimeTooSkewed) when calling the ListBuckets operation: The difference between the request time and the current time is too large."
 

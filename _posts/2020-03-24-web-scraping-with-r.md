@@ -1,8 +1,3 @@
----
-layout: single
-title: "Web Scraping With R"
-date: 2020-03-24
----
 
 ---
 layout: post

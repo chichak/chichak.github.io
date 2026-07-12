@@ -1,8 +1,3 @@
----
-layout: single
-title: "Mathematics Of Randomness"
-date: 2020-03-25
----
 
 ---
 layout: post

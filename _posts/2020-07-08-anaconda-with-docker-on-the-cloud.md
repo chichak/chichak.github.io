@@ -1,8 +1,3 @@
----
-layout: single
-title: "Anaconda With Docker On The Cloud"
-date: 2020-07-08
----
 <ul>
   <li>1. Create your droplet</li>
 <li>2. Mount/install your ubuntu server with docker</li>

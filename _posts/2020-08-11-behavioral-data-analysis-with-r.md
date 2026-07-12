@@ -1,9 +1,3 @@
----
-layout: single
-title: "Behavioral Data Analysis with R"
-date: 2020-08-11
-excerpt: "Practical notes for exploring behavioral data in R."
----
 <div>
       <h1><span class="label">Chapter 2. </span>Online Streaming Experiment</h1>
 

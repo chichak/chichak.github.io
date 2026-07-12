@@ -1,8 +1,3 @@
----
-layout: single
-title: "Gatsby My Teaching Framework"
-date: 2020-08-12
----
 <div> 
 <h3>How To Use GatsbyJS</h3>
 </div>
