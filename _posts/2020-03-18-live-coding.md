@@ -1,8 +1,3 @@
----
-layout: single
-title: "Welcome to a live coding session"
-date: 2020-03-18
----
 
 ---
 layout: post

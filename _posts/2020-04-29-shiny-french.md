@@ -1,8 +1,3 @@
----
-layout: single
-title: "Shiny French"
-date: 2020-04-29
----
 
 ---
 layout: post

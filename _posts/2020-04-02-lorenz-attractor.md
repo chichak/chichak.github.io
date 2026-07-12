@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title:  "Lorenz Attractor"
 date: '2020-04-02 14:25:00 +0100'
 categories: maths

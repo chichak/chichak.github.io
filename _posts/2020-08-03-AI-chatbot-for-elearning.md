@@ -1,9 +1,3 @@
----
-layout: single
-title: "An AI Chatbot for E-Learning"
-date: 2020-08-03
-excerpt: "Exploring conversational interfaces for teaching and learning."
----
 <h1>What Is a Chatbot?</h1>
 
 <div data-content="editor"><p>Chatbots are rules-driven services, sometimes powered by <a href="https://trainingindustry.com/glossary/artificial-intelligence/" target="_blank" rel="noopener">artificial intelligence (AI)</a>, that help individuals communicate in an online environment. In an e-learning context, <a href="https://www.valamis.com/blog/diving-to-the-learning-experience-machine-learning-ai-and-chatbots" target="_blank" rel="noopener">AI-powered chatbots</a> make learning more intuitive by helping learners choose, consume and understand content. Rather than clicking buttons, selecting drop-down menu items or tapping on a screen, with chatbots, learners can navigate content through gestures and conversational interactions.</p>

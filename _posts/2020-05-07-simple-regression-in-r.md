@@ -1,8 +1,3 @@
----
-layout: single
-title: "Histogram with kernel density curve"
-date: 2020-05-07
----
 
 <!DOCTYPE html><html lang=en-GB dir=ltr><head><meta name=viewport content="width=device-width, initial-scale=1.0"><meta http-equiv=X-UA-Compatible content="IE=edge"/><link rel=icon type=image/x-icon href=/images/logo/favicon1.ico /><meta charset=utf-8 /><base href=https://chichak.github.io/><meta name=keywords content="R, Programming"/><meta name=description content="What is Logistic regression? Logistic regression is used to predict a class, i.e., a probability. Logistic regression can predict a binary outcome accurately. Imagine you want to predict whether a loa"/>
   

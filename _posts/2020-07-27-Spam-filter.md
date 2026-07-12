@@ -1,8 +1,3 @@
----
-layout: single
-title: "Spam Filter"
-date: 2020-07-27
----
 <div><p>On the previous screen, we read in the dataset and saw that about 87% of the messages are ham ("ham" means non-spam), and the remaining 13% are spam. Now that we've become more familiar with the dataset, we can move on to building the spam filter.</p>
 <p>Our project is a machine learning problem, specifically a classification problem. The goal of our project is to <strong>maximize</strong> the predictive ability of our algorithm. This is in contrast to what we would usually do in something like hypothesis testing, where the goal is proper statistical inference. </p>
 <p>We want to optimize our algorithm's ability to correctly classify messages that it hasn't seen before. We'll want to create a process by which we can tweak aspects of our algorithm to see what produces the best predictions. The first step we need to take towards this process is divide up our <code>spam</code> data into 3 distinct datasets. </p>

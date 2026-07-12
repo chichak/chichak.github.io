@@ -1,8 +1,3 @@
----
-layout: single
-title: "Conda Virtualenv"
-date: 2020-05-17
----
 When you install conda, if you activate "base" env by default you will have (base) beside your username in your console.
 
 This can also be because auto_activate_base is set to True. You can check this using the following command

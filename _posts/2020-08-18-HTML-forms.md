@@ -1,8 +1,3 @@
----
-layout: single
-title: "Html Forms"
-date: 2020-08-18
----
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>

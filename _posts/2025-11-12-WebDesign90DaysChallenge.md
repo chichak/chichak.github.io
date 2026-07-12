@@ -1,9 +1,3 @@
----
-layout: single
-title: "Web Design Mastery — 3-Month Study Guide"
-date: 2025-11-12
-excerpt: "A structured 12-week plan for learning modern web design through deliberate projects."
----
 # Web Design Mastery — 3-Month Study Guide  
 **4 hours per day • Project-based learning • From fundamentals to professional UI design**
 
