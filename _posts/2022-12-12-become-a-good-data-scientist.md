@@ -1,3 +1,9 @@
+---
+layout: single
+title: "Become a Good Data Scientist"
+date: 2022-12-12
+excerpt: "Principles, tools, and habits for building a durable data science practice."
+---
 <p>
 Being a good data scientist involves a combination of technical skills and soft skills. On the technical side, it's important to have a strong foundation in programming and statistics, as well as experience with tools and platforms commonly used in data science, such as Python, R, and SQL. It can also be helpful to have knowledge of machine learning techniques and experience working with large datasets.
 

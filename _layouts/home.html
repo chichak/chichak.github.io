@@ -1,13 +1,49 @@
 ---
-layout: archive
+layout: default
 ---
 
-{{ content }}
+<main class="lab-home" id="top">
+  <section class="lab-hero lab-shell" aria-labelledby="hero-title">
+    <div class="lab-hero__copy" data-reveal>
+      <h1 id="hero-title">Ideas, experiments,<br>and systems for<br>understanding data.</h1>
+      <p>Notes on data science, machine learning, engineering, and the curious work of making complex things clear.</p>
+      <div class="lab-actions">
+        <a class="lab-link lab-link--blue" href="#writing">Explore the writing {% include lab-arrow.svg %}</a>
+        <a class="lab-link" href="{{ '/about/' | relative_url }}">About Ichrak {% include lab-arrow.svg %}</a>
+      </div>
+    </div>
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+    <div class="orbit-figure" data-orbit aria-label="Animated visualization of data trajectories converging on a shared point">
+      <svg class="orbit-figure__svg" viewBox="0 0 720 620" role="img" aria-labelledby="orbit-title orbit-desc">
+        <title id="orbit-title">Trajectories of inquiry</title>
+        <desc id="orbit-desc">A scientific plot showing several observed and inferred paths orbiting a central data point.</desc>
+        <defs><pattern id="minor-grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M 48 0 L 0 0 0 48" fill="none" stroke="#dce8ff" stroke-width="1"/></pattern></defs>
+        <rect x="70" y="48" width="590" height="510" fill="url(#minor-grid)"/>
+        <g class="plot-axis" aria-hidden="true"><path d="M70 306H675M365 48V570"/><path d="M70 297v18M168 300v12M266 300v12M463 300v12M561 300v12M659 297v18"/><path d="M356 48h18M359 150h12M359 252h12M359 354h12M359 456h12M356 558h18"/></g>
+        <g class="orbit-paths" aria-hidden="true"><ellipse cx="365" cy="306" rx="236" ry="96" transform="rotate(-13 365 306)"/><ellipse cx="365" cy="306" rx="220" ry="130" transform="rotate(25 365 306)"/><ellipse cx="365" cy="306" rx="192" ry="158" transform="rotate(58 365 306)"/><ellipse cx="365" cy="306" rx="170" ry="112" transform="rotate(96 365 306)"/><ellipse cx="365" cy="306" rx="128" ry="74" transform="rotate(150 365 306)"/><path class="orbit-paths__inferred" d="M128 486C216 455 230 86 398 111S681 239 585 421 248 520 153 373 198 137 358 158"/></g>
+        <g class="plot-points" aria-hidden="true"><circle cx="365" cy="306" r="7" class="point-core"/><circle cx="365" cy="306" r="18" class="point-ring"/><circle cx="188" cy="219" r="5"/><circle cx="527" cy="190" r="6"/><circle cx="553" cy="364" r="4"/><circle cx="269" cy="413" r="5"/><circle cx="440" cy="461" r="4"/><circle cx="228" cy="316" r="3"/><circle cx="455" cy="242" r="4"/><circle cx="307" cy="197" r="3"/><circle cx="483" cy="392" r="3"/></g>
+        <g class="plot-labels" aria-hidden="true"><text x="82" y="79">1.5</text><text x="82" y="311">0</text><text x="77" y="552">−1.5</text><text x="78" y="592">−1.5</text><text x="359" y="592">0</text><text x="642" y="592">1.5</text><text x="555" y="70">t = 128.42</text><text x="555" y="92">pts = 642</text><text x="555" y="114">dim = 3</text></g>
+      </svg>
+      <div class="orbit-legend" aria-hidden="true"><span><i></i> observed</span><span><i></i> inferred</span></div>
+    </div>
+  </section>
 
-{% for post in paginator.posts %}
-  {% include archive-single.html %}
-{% endfor %}
+  {% assign featured = site.posts | first %}{% if featured %}
+  <a class="feature-strip lab-shell" href="{{ featured.url | relative_url }}" data-reveal><span class="lab-label">Featured article</span><strong>{{ featured.title }}</strong><time datetime="{{ featured.date | date_to_xmlschema }}">{{ featured.date | date: "%d %b %Y" }}</time>{% include lab-arrow.svg %}</a>
+  {% endif %}
 
-{% include paginator.html %}
+  <section class="writing-section lab-shell" id="writing" aria-labelledby="writing-title">
+    <header class="section-heading" data-reveal><h2 id="writing-title">Recent writing</h2><a class="lab-link lab-link--blue" href="{{ '/writing/' | relative_url }}">View all writing {% include lab-arrow.svg %}</a></header>
+    <div class="writing-list">
+      {% for post in site.posts limit:5 %}
+      <article class="writing-row{% if forloop.first %} writing-row--lead{% endif %}" data-reveal><span class="writing-row__index">0{{ forloop.index }}</span><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %b %Y" }}</time><div class="writing-row__main"><h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>{% if forloop.first %}<span class="writing-row__tags">Focus · Systems</span>{% endif %}<p>{{ post.excerpt | default: post.content | strip_html | strip_newlines | truncate: 138 }}</p></div>{% if forloop.first %}<div class="writing-row__chart" aria-label="A seven-stage progress curve from intention to compound learning"><svg viewBox="0 0 560 230" role="img"><defs><pattern id="writing-grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#dce8ff"/></pattern></defs><rect width="560" height="230" fill="url(#writing-grid)"/><path class="chart-axis" d="M36 18V202H540"/><path class="chart-curve" d="M36 190C95 176 129 151 180 145S259 110 318 106 406 93 455 66 503 38 526 28"/><g class="chart-points"><circle cx="36" cy="190" r="4"/><circle cx="112" cy="161" r="4"/><circle cx="180" cy="145" r="4"/><circle cx="260" cy="110" r="4"/><circle cx="352" cy="102" r="4"/><circle cx="455" cy="66" r="4"/><circle cx="526" cy="28" r="5"/></g><g class="chart-labels"><text x="46" y="183">01 INTENT</text><text x="123" y="153">02 DESIGN</text><text x="196" y="136">03 EDIT</text><text x="273" y="101">04 DEEP WORK</text><text x="362" y="92">05 ITERATE</text><text x="430" y="55">06 REFLECT</text><text x="465" y="18">07 COMPOUND</text><text x="478" y="222">TIME →</text></g></svg></div>{% endif %}<a class="writing-row__arrow" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title }}">{% include lab-arrow.svg %}</a></article>
+      {% endfor %}
+    </div>
+    <nav class="discipline-rail" aria-label="Explore disciplines" data-reveal><a href="{{ '/Machine-Learning/' | relative_url }}"><span class="discipline-mark">∴</span>Data science</a><a href="{{ '/Machine-Learning/' | relative_url }}"><span class="discipline-mark">⌬</span>Machine learning</a><a href="{{ '/projects/' | relative_url }}"><span class="discipline-mark">&lt;/&gt;</span>Engineering</a><a href="{{ '/writing/' | relative_url }}"><span class="discipline-mark">∑</span>Mathematics</a></nav>
+  </section>
+
+  <section class="about-field lab-shell" aria-labelledby="about-title">
+    <div class="about-field__visual" data-reveal><div class="portrait-frame"><img src="{{ '/images/ichrak.png' | relative_url }}" alt="Portrait of Ichrak Lafram" loading="lazy"><span class="portrait-scan" aria-hidden="true"></span><span>Ichrak Lafram / Dubai</span></div><div class="field-note" aria-hidden="true"><b>Systems thinking</b><span>observe → explain</span><span>↑ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ↓</span><span>model ← iterate</span><i></i><em>curiosity in orbit.</em></div></div>
+    <div class="about-field__copy" data-reveal><h2 id="about-title">A curious engineer,<br>learning in public.</h2><p>I’m Ichrak Lafram — a computer science engineer, data science enthusiast, cartoonist, and teacher. I write to turn experiments into explanations and complex systems into useful mental models.</p><a class="lab-link lab-link--blue" href="{{ '/about/' | relative_url }}">More about Ichrak {% include lab-arrow.svg %}</a><div class="contact-line"><span>Have a question or an idea?</span><a href="mailto:ichrak.7@gmail.com">ichrak.7@gmail.com</a></div></div>
+  </section>
+</main>

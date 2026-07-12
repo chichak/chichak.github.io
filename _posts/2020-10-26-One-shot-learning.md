@@ -1,3 +1,9 @@
+---
+layout: single
+title: "One-Shot Learning"
+date: 2020-10-26
+excerpt: "Notes on learning useful representations from very few examples."
+---
 
 <div class="gutenbergContent__content--1FgGp html_0"><p>Machine learning typically requires tons of examples. 
 To get an AI model to recognize a horse, you need to show it thousands of images of horses. This is what makes the technology computationally expensive—and very 

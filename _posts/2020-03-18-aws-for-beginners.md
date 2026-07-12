@@ -1,3 +1,8 @@
+---
+layout: single
+title: "Aws For Beginners"
+date: 2020-03-18
+---
 
 ---
 layout: post

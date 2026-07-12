@@ -1,3 +1,8 @@
+---
+layout: single
+title: "Projets A Commencer"
+date: 2020-09-13
+---
 Il y a plein de projet à réaliser, notemment bcp de topics à découvrir. Ici je vais mettre les liens des topics à voir prochainement.
 
 <h2>Linear Programming using PuLP - Solve timetable scheduling</h2>

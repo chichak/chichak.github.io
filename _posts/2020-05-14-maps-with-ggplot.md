@@ -1,3 +1,8 @@
+---
+layout: single
+title: "'fortify' the data to get a dataframe format required by ggplot2"
+date: 2020-05-14
+---
 ## This is the code to build maps for morocco 12 states.
 The geojson file is located here : 
 <a href= "https://raw.githubusercontent.com/chichak/Covid19-MA/master/ma-convid19-state.geojson"> geojson file link </a>

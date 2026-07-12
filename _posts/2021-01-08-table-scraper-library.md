@@ -1,3 +1,8 @@
+---
+layout: single
+title: "main.py"
+date: 2021-01-08
+---
 <p> This is a small module which help you get data from websites in a form of a table.</p>
 ## 1. Start by installing the requirements.txt
 ```R

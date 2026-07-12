@@ -1,3 +1,8 @@
+---
+layout: single
+title: "Linear Regression Eigth"
+date: 2020-07-28
+---
 <em>Residuals</em>
 
 <div><p>Below is the scatterplot with the linear regression line that we generated on the last screen with <code>ggplot2</code>. Titles have been added for clarity. In this example, we see that a linear model is a reasonable choice to explain the relationship between <code>distance</code> and <code>cost</code>. How does this compare to the trend line you imagined? </p>

@@ -1,3 +1,9 @@
+---
+layout: single
+title: "Data Science Course Notes"
+date: 2021-09-08
+excerpt: "A structured collection of data science learning materials."
+---
 Key points in a data science course (deep understanding) : 
 
 <ol>

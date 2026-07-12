@@ -1,3 +1,8 @@
+---
+layout: single
+title: "Installing Open Edx"
+date: 2020-08-06
+---
 The documentation is here : 
 https://docs.tutor.overhang.io/
 
